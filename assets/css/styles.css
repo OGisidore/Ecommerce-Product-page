@@ -1,0 +1,403 @@
+
+@import url(mobiles.css);
+@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+/* Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700 */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Kumbh Sans ;
+    font-size: 16px;
+    font-weight: 400;
+}
+h1,h2,h3,h4,strong{
+  font-weight: 700;
+}
+:root {
+  --border: 0.1rem solid #ccc;
+  --radius: 5rem;
+  --Orange: hsl(26, 100%, 55%);
+  --Paleorange: hsl(25, 100%, 94%);
+
+  --Verydarkblue: hsl(220, 13%, 13%);
+  --Darkgrayishblue: hsl(219, 9%, 45%);
+  --Grayishblue: hsl(220, 14%, 75%);
+  --Lightgrayishblue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  /* (with75% opacity for lightbox background) */
+  --Black: hsla(0, 0%, 0%, 0.896);
+}
+
+.d-none{
+  display: none !important;
+}
+/* .nav ul,
+.logo{
+    height: 40px;
+} */
+
+.header{
+/* z-index: 10; */
+background-color: var(--White);
+}
+
+.gap-1{
+    gap: 1rem;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.d-flex {
+  display: flex;
+}
+.align-self-center{
+    align-self: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+.none {
+  display: none ;
+}
+.gap-1 {
+  gap: 1;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.gap-3 {
+  gap: 3;
+}
+.gap-4 {
+  gap: 4;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.px-1 {
+  padding: 0 1rem;
+}
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.px-3 {
+  padding: 0 3rem;
+}
+.px-4 {
+  padding: 0 4rem;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.py-4 {
+  padding: 4rem 0;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my-1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-control{
+    width: 100%;
+    border-radius: 1rem;
+    background-color: var(--Orange);
+    color: var(--White);
+    /* outline: none; */
+    border: none;
+}
+.heigth-100:hover {
+  height: 100%;
+  /* padding: 1rem 0; */
+  color: var(--Verydarkblue) !important;
+  border-bottom: 0.2rem solid var(--Orange);
+}
+a {
+  color: var(--Darkgrayishblue);
+  font-weight: bold;
+}
+.m-4 {
+  margin: 4rem;
+}
+.mx-1{
+    margin-right:1rem;
+    margin-left: 1rem;
+}
+.mx-2{
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+.me-4{
+    margin-right: 6rem;
+    /* margin-left: 4rem; */
+}
+.content {
+  width: 80%;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.sticky-top {
+  position: sticky;
+  top: 0;
+}
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+}
+.fixed {
+  position: fixed;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.bordered {
+  border: var(--border);
+}
+.border-bottom {
+  border-bottom: var(--border);
+}
+.border-top {
+  border-top: var(--border);
+}
+.border-left {
+  border-left: var(--border);
+}
+.border-rigth {
+  border-right: var(--border);
+}
+
+.radius {
+  border-radius: var(--radius);
+}
+.rounded-circle {
+  border-radius: 30rem;
+}
+
+.style-none {
+  list-style: none;
+  text-decoration: none;
+}
+
+
+/* les modales / the all modals there */
+
+.cartModal{
+    width: 25rem;
+    height: 15rem;
+    /* border: var(--border); */
+    top: 4rem;
+    right: 5%;
+    /* transform: translate(500% ,-10%); */
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: .2rem 1rem 4rem  #ccc ;
+    /* padding: 1rem; */
+}
+.cartContents{
+    height: calc( 100% - 3.2rem);
+}
+.cartModal.active{
+    display: block !important;
+}
+.logoAndNav{
+    width: 70%;
+}
+.count{
+    user-select: none;
+    background-color: var(--Orange);
+    /* inset: 2rem; */
+    /* padding: .1rem; */
+    font-size: .6rem;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    border-radius: 2rem;
+    top: 0px;
+    color: #fff;
+    right: -9px;
+}
+.justify-content-evenly{
+    justify-content: space-evenly;
+}
+
+
+/* container */
+
+
+.container{
+    height: calc(100vh - 5rem);
+    width: 100vw;
+}
+
+
+
+.container .content {
+    width: 60%;
+}
+.container .content .productImage,
+.container .content .description{
+    width: 43%;
+}
+.thumbnails *{
+    width: 25%;
+    border-radius: .5rem;
+}
+.thumbnails img.active{
+    border: .4rem solid var(--Orange);
+    opacity: 0.75;
+}
+
+
+.description h4{
+    text-transform: uppercase;
+    color: var(--Orange);
+    font-weight: 700;
+}
+
+.description h2{
+    font-size: 2rem;
+}
+
+.description p{
+    font-weight: 400;
+    font-size: 16px;
+}
+.description .price strong{
+    font-size: 1.5rem;
+}
+
+.description .price span{
+    margin: auto 1rem;
+    padding: .1rem .5rem;
+    color: var(--Orange);
+    background-color: var(--Paleorange);
+}
+.description .regularPrice{
+    text-decoration: line-through;
+    color: var(--Darkgrayishblue);
+}
+
+.description .actions{
+    width: 100%;
+
+}
+.description .actions .choice{
+    padding: .5rem;
+    width: 30%;
+    background-color: var(--Grayishblue);
+}
+
+.description .actions .add{
+    width: 50%;
+    background-color: var(--Orange);
+    color: var(--White);
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+
+.description .actions .add :nth-child(1){
+    
+    color: #fff;
+    fill: var(--White) !important;
+}
+
+.ProductsView{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Black);
+    /* z-index: 100; */
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+}
+.ProductsView  .close,
+.ProductsView .view2,
+.ProductsView .thumbnails{
+    width: 25rem;
+}
+.ProductsView .next{
+    right: -1.5rem;
+}
+
+.ProductsView .previous{
+    left: -1.5rem;
+}
+.ProductsView .next,
+.ProductsView .previous{
+    top: 50%;
+    /* text-align: center; */
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    padding:  1rem;
+    border-radius: 3rem;
+    background-color: #fff;
+}
+.closeicon{
+    align-self: center;
+    right: 35%;
+    top: 10%;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header of the page  -->
+  <div class="header sticky-top d-flex justify-content-center ">
+    <div class="content d-flex justify-content-between border-bottom  ">
+      <div class="logoAndNav d-flex align-items-center mx-1 py-2">
+        <div class="logo d-flex gap-2 align-items-center">
+          <div class="d-block menuIcon none">
+            <img src="assets/images/icon-menu.svg" class=" d-block " alt="icon-menu">
+          </div>
+          
+          <img src="assets/images/logo.svg" class="align-self-center" height="24" alt="">
+        </div>
+        <div class="nav navMobil md-none d-flex  align-items-center">
+          <ul class=" list d-flex  align-items-center px-2 gap-2 style-none">
+            <li class="d-block none closeMenu "><svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg></li>
+            <li class="li-menu"><a href="#" class="style-none  py-2 heigth-100">Collections</a></li>
+            <li class="li-menu"><a href="#" class="style-none  py-2  heigth-100">Men</a></li>
+            <li class="li-menu"><a href="#" class="style-none   py-2 heigth-100">Women</a></li>
+            <li class="li-menu"><a href="#" class="style-none py-2 heigth-100">About</a></li>
+            <li class="li-menu"><a href="#" class="style-none py-2 heigth-100">Contact</a></li>
+
+          </ul>
+        </div>
+
+      </div>
+      <div class="cartAndAvatar d-flex align-items-center justify-content-between">
+        <div class="cartContent relative d-flex align-items-center" id="cart"><img src="assets/images/icon-cart.svg" alt="icon-cart"> </div>
+        <img src="assets/images/image-avatar.png" height="30" id="avatar" class="px-1" alt="">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- cart modal -->
+  <div class="cartModal none fixed " id="cartModal">
+    <div class="header-cart border-bottom p-1 ">cart</div>
+    <div class="cartContents d-flex align-items-center justify-content-center">
+      <p>your cart is empty</p>
+    </div>
+
+
+  </div>
+
+  <!-- main of the page -->
+
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="content gap-2 d-flex justify-content-between">
+      <div class="productImage">
+        <div class="view">
+          <img src="assets/images/image-product-1.jpg" height="400" alt="">
+        </div>
+        <div class="thumbnails d-flex py-1 gap-1 ">
+          <img src="assets/images/image-product-1-thumbnail.jpg" data-id="1" class="active" alt="">
+          <img src="assets/images/image-product-2-thumbnail.jpg" data-id="2" alt="">
+          <img src="assets/images/image-product-3-thumbnail.jpg" data-id="3" alt="">
+          <img src="assets/images/image-product-4-thumbnail.jpg" data-id="4" alt="">
+
+        </div>
+        <div class="ProductsView d-none absolute ">
+          <div class="closeicon absolute">
+            <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="view2 relative d-flex">
+            <div class="previous absolute">
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+            </div>
+            <img src="assets/images/image-product-1.jpg" height="400" alt="">
+            <div class="next absolute">
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+            </div>
+          </div>
+          <div class="thumbnails d-flex py-1 gap-1">
+            <img src="assets/images/image-product-1-thumbnail.jpg" data-id="1" class="active" alt="">
+            <img src="assets/images/image-product-2-thumbnail.jpg" data-id="2" alt="">
+            <img src="assets/images/image-product-3-thumbnail.jpg" data-id="3" alt="">
+            <img src="assets/images/image-product-4-thumbnail.jpg" data-id="4" alt="">
+  
+          </div>
+
+        </div>
+      </div>
+      <div class="description  py-3">
+        <h4 class="py-1"> Sneaker Company </h4>
+        <h2 class="py-1">Fall Limited Edition Sneakers</h2>
+        <p class="py-1"> These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+       <div class="priceBox">
+        <div class="price py-1"><strong>$125.00</strong> <span> 50%</span> </div>
+        <div class="regularPrice"> $250.00 </div>
+       </div>
+        <div class="actions d-flex  py-1 gap-1">
+          <div class="choice d-flex  justify-content-evenly align-items-center">
+            <img src="assets/images/icon-minus.svg" alt="" id="minus">
+            <span id="counter">0</span>
+            <img src="assets/images/icon-plus.svg" alt="" id="plus">
+          </div>
+          <div class="add d-flex gap-1 justify-content-center align-items-center" id="addButton">
+            
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill-rule="nonzero"/></svg>  
+            <p>Add to cart</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Isidore OGOULODO</a>.
+  </div>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
